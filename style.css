@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgb(38, 45, 53);
+}
+
+.inner {
+    margin: 50px auto;
+}
+
+.container{
+    width: 85vw;
+    height: 85vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+}
+
+.up{
+    border-radius: 48px 48px 0px 0px;
+    width: 100%;
+    height: 85%;
+    background-color: aliceblue;
+    background-image: url(bgC.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.frame{
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    background-image: url(s.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    outline: 11px solid white;
+}
+
+.down{
+    width: 100%;
+    background-color: aqua;
+}
+
+
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 50%;
+}
+
+
+.name{
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.325rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.sub-title{
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.375rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.text{
+    color: rgba(255,255,255,0.922);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.buttons{
+    width: 100%;
+    height: calc(100% - 85%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+}
+
+li{
+    width: 60px;
+    height: 60px;
+    outline: 1px solid rgba(0, 0, 0, 0.397);
+    border-radius: 50%;
+    transition: 150ms ease-in-out;
+}
+li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg{
+    width: 35px;
+}
+
+li:hover{
+    margin-bottom: 1.5rem;
+    outline: 1px solid black;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 5rem;
+    color: black;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    border-radius: 50px;
+    transition: 200ms linear;
+}
+
+.btn:hover{
+    transform: scale(1.15);
+}
+
+@media (max-height: 850px) {
+    .frame{
+        width: 15rem !important;
+        height: 15rem !important;
+    }
+
+    .right{
+        gap: 1.5rem !important;
+    }
+
+    .btn{
+        height: 4rem;
+        font-size: 1.25rem;
+    }
+    .container{
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1200px){
+    .container,.up{
+        border-radius: 0px;
+    }
+    .frame{
+        width: 18rem;
+        height: 18rem;
+    }
+    .btn{
+        height: 4rem;
+        font-size: 1.25rem;
+    }
+
+    .right{
+        gap: 1.5rem;
+    }
+
+    .up{
+        flex-direction: column;
+        align-items: center;
+    }
+    .right{
+        width: 100%;
+        align-items: center ;
+        text-align: center;
+    }
+
+    .buttons{
+        gap: 1.2rem;
+    }
+}
+
+@media (max-height: 700px){
+    .name{
+        font-size: 2rem;
+    }
+
+    .sub-title,.text{
+        font-size: 1rem;
+    }
+    .frame{
+        width: 10rem !important;
+        height: 10rem !important;
+    }
+}
+
+@media (max-width: 600px){
+    .inner{
+        margin: auto auto;
+    }
+    .container{
+        width: 100vw;
+    }
+    .frame{
+        width: 10rem !important;
+        height: 10rem !important;
+    }
+
+    .right{
+        gap: 1.5rem !important;
+    }
+
+    .btn{
+        height: 4rem;
+        font-size: 1.25rem;
+    }
+    .container{
+        height: 100vh;
+    }
+    .buttons{
+        row-gap: .1rem;
+        column-gap: .8rem;
+        flex-wrap: wrap;
+    }
+    svg{
+        width: 30px;
+    }
+
+    li{
+        width: 40px;
+        height: 40px;
+    }
+    .btn{
+        width: 80%;
+        height: 2rem;
+        font-size: 1.25rem;
+    }
+}
